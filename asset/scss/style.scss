@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+@import "color.scss";
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $VeryDarkBlue;
+}
+
+$blackgray:#3c3c3f;
+
+// Rating
+.rating{
+    display: block;
+    max-width: 380px;
+    width: 100%;
+    height: 380px;
+    min-width: 300px;
+    padding: 1.5rem;
+    background: $DarkBlue;
+    border-radius: 1rem;
+    & .img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $blackgray;
+        border-radius: 2rem;
+        width: 40px;
+        height: 40px;
+        & .star{
+            background-image: url("/images/icon-star.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 15px;
+            height: 15px
+        } 
+    }
+    & .notify{
+        display: none;
+        color: $White;
+        background-color: red; 
+        margin: .5rem 0;
+        padding: .3rem 0 .3rem 0;
+        text-align: center;
+        border-radius: 2rem;
+        font-weight: bold;
+
+    }
+    & h1{
+        padding: 1rem 0;
+        font-size: 30px;
+        font-weight: 700;
+        color: $White;
+    }
+    & p{
+        color: $MediumGrey;
+        line-height: 1.5rem;
+    }
+    & .rating-state{
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 0;
+        & .state{
+            color: $LightGrey;
+            padding: .7rem 1.1rem;
+            border-radius: 2rem;
+            background-color: $blackgray;
+            cursor: pointer;
+        &:hover{
+            color: $White;
+            background-color: $Orange;
+        }
+        }
+        & .state.active{
+            cursor: pointer;
+            padding: .7rem 1.1rem;
+            border-radius: 2rem;
+            color: $White;
+            background-color: $MediumGrey;
+        }
+
+    }
+    & #submit{
+        width: 100%;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+        background-color: $Orange;
+        color: $White;
+        padding: .5rem;
+        border-radius: 1.5rem;
+        cursor: pointer;
+        &:hover{
+            color: $Orange;
+            background-color: $White;
+        }
+    }
+}
+// Rating End
+
+
+// Thankyou
+.ty{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    max-width: 380px;
+    width: 100%;
+    height: 360px;
+    min-width: 300px;
+    padding: 1.5rem;
+    background: $DarkBlue;
+    border-radius: 1rem;
+    & .img{
+        background-image: url("/images/illustration-thank-you.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 130px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    & h5{
+        margin-top: 1rem;
+        margin: 0 auto;
+        text-align: center;        
+        padding: .5rem;
+        border-radius: 2rem;
+        width: 170px;
+        height: 30px;
+        background-color: $blackgray;
+        color: $Orange;
+    }
+    & h1{
+        text-align: center;
+        padding: 2rem 0 1rem 0;
+        color: $White;
+    }
+    & p{
+        text-align: center;
+        color: $MediumGrey;
+    }
+
+}
+// Thankyou End
